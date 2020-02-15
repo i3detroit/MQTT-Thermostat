@@ -1,0 +1,3 @@
+[submodule "firmware/libs/mqtt-wrapper"]
+	path = firmware/lib/mqtt-wrapper
+	url = git@github.com:i3detroit/mqtt-wrapper.git
