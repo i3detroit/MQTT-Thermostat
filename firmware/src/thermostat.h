@@ -8,34 +8,7 @@
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
-#ifndef NAME
-#define NAME "NEW-thermostat"
-#endif
-
-#ifndef TOPIC
-#define TOPIC "i3/program-me/NEW-thermostat"
-#endif
-
-#ifndef WIFI_SSID
-#define WIFI_SSID "i3detroit-wpa"
-#endif
-
-#ifndef WIFI_PASSWORD
-#define WIFI_PASSWORD "i3detroit"
-#endif
-
-#ifndef MQTT_SERVER
-#define MQTT_SERVER "10.13.0.22"
-#endif
-
-#ifndef MQTT_PORT
-#define MQTT_PORT 1883
-#endif
-
-//Set if no cool
-#ifndef HEAT_ONLY
-//#define HEAT_ONLY
-#endif
+#include "local.h"
 
 
 #if TRUE
