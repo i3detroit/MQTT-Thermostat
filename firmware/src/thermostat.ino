@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-//#include <errno.h>
 #include <Arduino.h>
 #include <EEPROM.h>
 #include <U8g2lib.h>
@@ -59,7 +58,7 @@ bool isValidEEPROM() {
 }
 
 void saveTimeoutToEEPROM() {
-  DEBUG_PRINTLN("SAVING TIMEOUT");
+  Serial.println("SAVING TIMEOUT");
   for(int i=0; i<4; ++i) {
     EEPROM.write(EEPROM_TIMEOUT+i, controlState.timeout.octets[i]);
   }
@@ -123,46 +122,46 @@ void handleButton(int button) {
 
   switch(button) {
     case BTN_RESET:
-      DEBUG_PRINTLN("button RESET");
+      Serial.println("button RESET");
       resetState();
       break;
     case BTN_FAN_ON:
-      DEBUG_PRINTLN("button FAN_ON");
+      Serial.println("button FAN_ON");
       controlState.fan = true;
       break;
     case BTN_FAN_AUTO:
-      DEBUG_PRINTLN("button FAN_AUTO");
+      Serial.println("button FAN_AUTO");
       controlState.fan = false;
       break;
     case TEMP_UP:
-      DEBUG_PRINTLN("button TEMP_UP");
+      Serial.println("button TEMP_UP");
       if(++(controlState.target) > MAX_TEMP) {
         controlState.target = MAX_TEMP;
       }
       displayDirty = true;
       break;
     case TEMP_DOWN:
-      DEBUG_PRINTLN("button TEMP_DOWN");
+      Serial.println("button TEMP_DOWN");
       if(--(controlState.target) < MIN_TEMP) {
         controlState.target = MIN_TEMP;
       }
       displayDirty = true;
       break;
     case BTN_HEAT:
-      DEBUG_PRINTLN("button HEAT");
+      Serial.println("button HEAT");
       EEPROM.write(EEPROM_MODE, HEAT);
       EEPROM.commit();
       controlState.mode = HEAT;
       break;
     case BTN_OFF:
-      DEBUG_PRINTLN("button OFF");
+      Serial.println("button OFF");
       EEPROM.write(EEPROM_MODE, OFF);
       EEPROM.commit();
       controlState.mode = OFF;
       break;
 #ifndef HEAT_ONLY
     case BTN_COOL:
-      DEBUG_PRINTLN("button COOL");
+      Serial.println("button COOL");
       EEPROM.write(EEPROM_MODE, COOL);
       EEPROM.commit();
       controlState.mode = COOL;

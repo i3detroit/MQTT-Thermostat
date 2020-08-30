@@ -1,13 +1,7 @@
-#ifndef __DOCONTROL_H_
-#define __DOCONTROL_H_
+#ifndef DOCONTROL_H
+#define DOCONTROL_H
 
-#if !defined(ARDUINO_ESP8266_WEMOS_D1MINI) && !defined(ESP8266)
-#include <stdint.h>
-#include <stdbool.h>
-uint32_t millis() { return 42; }
-#else
 #include <Arduino.h>
-#endif
 
 #include "thermostat.h"
 #include "pins.h"

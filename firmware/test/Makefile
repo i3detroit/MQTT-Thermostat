@@ -1,11 +1,11 @@
 CC=gcc
-CFLAGS=-I.
+CFLAGS=-I. -I../src
 TARGET=test
 
 $(TARGET): $(TARGET).o doControl.o
-		$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) -o $@ $^ $(CFLAGS)
 
-doControl.o: ../doControl.cpp
+doControl.o: ../src/doControl.cpp
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 test.o: test.c

@@ -9,3 +9,7 @@ help:   ## Show this help.
 .PHONY: flash
 flash:  ## tell pio to flash the board with settings from local.mk
 	@PLATFORMIO_BUILD_FLAGS="$(PLATFORMIO_BUILD_FLAGS)" pio run -t upload
+
+.PHONY: build
+build:  ## tell pio to build  with settings from local.mk
+	@PLATFORMIO_BUILD_FLAGS="$(PLATFORMIO_BUILD_FLAGS)" pio run

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "../thermostat.h"
-#include "../doControl.h"
+#include "../src/thermostat.h"
+#include "../src/doControl.h"
 
 // struct ControlState {
 //   enum Mode mode;

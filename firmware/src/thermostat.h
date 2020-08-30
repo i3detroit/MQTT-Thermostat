@@ -1,10 +1,9 @@
-#ifndef __THERMOSTAT_H_
-#define __THERMOSTAT_H_
+#ifndef THERMOSTAT_H
+#define THERMOSTAT_H
 
 #include "pins.h"
-#ifdef ESP8266
 #include <Arduino.h>
-#endif
+
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
@@ -47,20 +46,6 @@
 #pragma message "WIFI_PASSWORD: " STR(WIFI_PASSWORD)
 #pragma message "MQTT_SERVER: " STR(MQTT_SERVER)
 #pragma message "MQTT_PORT: " STR(MQTT_PORT)
-
-#if TRUE
-#ifdef !defined(ARDUINO_ESP8266_WEMOS_D1MINI) && !defined(ESP8266)
-#define DEBUG_PRINT(x) Serial.print(x)
-#define DEBUG_PRINTLN(x) Serial.println(x)
-#else
-#include <stdio.h>
-#define DEBUG_PRINT(x) printf(x)
-#define DEBUG_PRINTLN(x) printf(x); printf("\n")
-#endif
-#else
-#define DEBUG_PRINT(x) do {} while (0)
-#define DEBUG_PRINTLN(x) do {} while (0)
-#endif
 
 
 /*################################ EEPROM Section ##########################*/
@@ -116,4 +101,4 @@ struct OutputState {
   bool mqttOutputDirty;
 };
 
-#endif
+#endif //THERMOSTAT_H
