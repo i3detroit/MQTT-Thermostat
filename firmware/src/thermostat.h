@@ -38,6 +38,16 @@
 #endif
 
 
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
+
+#pragma message "NAME: " STR(NAME)
+#pragma message "TOPIC: " STR(TOPIC)
+#pragma message "WIFI_SSID: " STR(WIFI_SSID)
+#pragma message "WIFI_PASSWORD: " STR(WIFI_PASSWORD)
+#pragma message "MQTT_SERVER: " STR(MQTT_SERVER)
+#pragma message "MQTT_PORT: " STR(MQTT_PORT)
+
 #if TRUE
 #ifdef !defined(ARDUINO_ESP8266_WEMOS_D1MINI) && !defined(ESP8266)
 #define DEBUG_PRINT(x) Serial.print(x)

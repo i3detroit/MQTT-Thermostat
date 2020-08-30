@@ -1,0 +1,11 @@
+WIFI_SSID=ssid
+WIFI_PASSWORD=pass
+NAME=testThermostat
+MQTT_SERVER=192.168.1.1
+TOPIC=program-me/NEW-thermostat
+
+PLATFORMIO_BUILD_FLAGS='-DWIFI_SSID=\"$(WIFI_SSID)\"' \
+					   '-DWIFI_PASSWORD=\"$(WIFI_PASSWORD)\"' \
+					   '-DNAME=\"$(NAME)\"' \
+					   '-DMQTT_SERVER=\"$(MQTT_SERVER)\"' \
+					   '-DTOPIC=\"$(TOPIC)\"'
