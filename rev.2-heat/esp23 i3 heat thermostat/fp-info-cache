@@ -1,4 +1,4 @@
-19863228357797234
+19876399145760864
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -51289,6 +51289,13 @@ C64-Cart-NoSilkS
 46
 44
 Evan's misc parts
+CUI_SJ1-3525N
+
+
+0
+5
+5
+Evan's misc parts
 DIP254P762X533-16
 
 
@@ -51380,6 +51387,13 @@ mounting hole TI Thermostat
 0
 0
 Evan's misc parts
+OS202011MS2QS1
+OS202011MS2QS1-1
+Switch
+0
+8
+8
+Evan's misc parts
 OSHW gear
 
 
@@ -51393,6 +51407,20 @@ Inductor
 0
 2
 2
+Evan's misc parts
+PEC11R-4XXXK-SXXXX
+PEC11R-4xxxK-Sxxxx
+Variable Resistor
+0
+7
+7
+Evan's misc parts
+PLCC127P1750X1750X457-44N
+plcc44
+Integrated Circuit
+0
+44
+44
 Evan's misc parts
 ProMicro
 Pro Micro footprint
@@ -51428,6 +51456,13 @@ Integrated Circuit
 0
 16
 16
+Evan's misc parts
+SOP65P780X200-20N
+20 Pin SSOP
+Integrated Circuit
+0
+20
+20
 Evan's misc parts
 TE_1776266-4
 
@@ -51505,6 +51540,27 @@ electronicsgoldmine_numpad
 0
 36
 36
+Evan's misc parts
+jaguar abc
+
+
+0
+32
+2
+Evan's misc parts
+jaguar dpad
+
+
+0
+2
+2
+Evan's misc parts
+jaguar keypad button
+
+
+0
+12
+2
 Evan's misc parts
 northstar db25
 09683535612-1
